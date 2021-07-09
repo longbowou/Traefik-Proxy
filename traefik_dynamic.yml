@@ -12,8 +12,6 @@ http:
   routers:
     traefik-dashboard:
       rule: "Host(`traefik.longbowou.com`)"
-      middlewares:
-        - traefik-dashboard-auth
       entrypoints:
         - http
       service: "api@internal"
