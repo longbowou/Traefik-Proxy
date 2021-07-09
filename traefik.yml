@@ -40,6 +40,8 @@ api:
 
 providers:
   docker:
+    endpoint: "tcp://127.0.0.1:2377"
+    swarmMode: true
     network: treafik-proxy
     exposedByDefault: false
     watch: true
