@@ -18,6 +18,7 @@ services:
       - ./acme.json:/acme.json
       - ./traefik.log:/traefik.log
       - ./access.log:/acme.log
+    restart: always
 
 networks:
   default:
