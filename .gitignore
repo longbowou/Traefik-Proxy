@@ -1,2 +1,4 @@
 .idea
 acme.json
+traefik.log
+access.log

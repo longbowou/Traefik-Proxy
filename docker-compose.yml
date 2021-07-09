@@ -8,6 +8,8 @@ services:
       # The HTTP/HTTPS port
       - 80:80
       - 443:443
+    environment:
+      - TZ=Africa/Lome
     volumes:
       # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock
