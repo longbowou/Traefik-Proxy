@@ -41,6 +41,7 @@ api:
 providers:
   docker:
     network: treafik-proxy
+    exposedByDefault: false
     watch: true
 
   file:
