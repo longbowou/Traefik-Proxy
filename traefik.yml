@@ -53,8 +53,8 @@ providers:
 certificatesResolvers:
   le:
     acme:
-      email: info@longbowou.com
-      storage: /acme.json
+      email: "info@longbowou.com"
+      storage: "acme.json"
       httpChallenge:
         entryPoint: http
 
