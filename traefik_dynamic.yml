@@ -14,7 +14,6 @@ http:
       rule: "Host(`traefik.longbowou.com`)"
         - traefik-dashboard-auth
       entrypoints:
-        - http
         - https
       service: "api@internal"
       tls:
