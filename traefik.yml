@@ -44,7 +44,8 @@ providers:
     exposedByDefault: false
     watch: true
   file:
-    filename: "/traefik_dynamic.yml"
+    watch: true
+    filename: traefik_dynamic.yml
 
 ################################################################
 # Resolvers
@@ -54,7 +55,7 @@ certificatesResolvers:
   le:
     acme:
       email: info@longbowou.com
-      storage: "/acme.json"
+      storage: acme.json
       httpChallenge:
         entryPoint: http
 
