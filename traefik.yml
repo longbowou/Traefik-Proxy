@@ -50,13 +50,11 @@ providers:
 # Resolvers
 ################################################################
 
-acme:
-  storage: acme.json
-
 certificatesResolvers:
   le:
     acme:
       email: info@longbowou.com
+      storage: "/acme.json"
       httpChallenge:
         entryPoint: http
 
