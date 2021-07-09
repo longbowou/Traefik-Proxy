@@ -5,19 +5,17 @@ services:
     image: traefik:latest
     container_name: traefik-proxy
     ports:
-      # The HTTP/HTTPS port
       - 80:80
       - 443:443
     environment:
       - TZ=Africa/Lome
     volumes:
-      # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock
       - ./traefik.yml:/etc/traefik/traefik.yml
       - ./traefik_dynamic.yml:/traefik_dynamic.yml
       - ./acme.json:/acme.json
       - ./traefik.log:/traefik.log
-      - ./access.log:/acme.log
+      - ./access.log:/access.log
     restart: always
 
 networks:
