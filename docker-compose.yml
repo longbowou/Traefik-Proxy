@@ -19,5 +19,6 @@ services:
 
 networks:
   default:
+    driver: overlay
     external:
       name: traefik-proxy
