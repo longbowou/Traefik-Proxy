@@ -18,3 +18,8 @@ services:
       - ./acme.json:/acme.json
       - ./traefik.log:/traefik.log
       - ./access.log:/acme.log
+
+networks:
+  default:
+    external:
+      name: traefik-proxy

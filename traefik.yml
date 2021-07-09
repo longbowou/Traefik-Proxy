@@ -43,6 +43,7 @@ providers:
     network: treafik-proxy
     exposedByDefault: false
     watch: true
+
   file:
     filename: traefik_dynamic.yml
     watch: true
