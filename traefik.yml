@@ -44,7 +44,7 @@ providers:
     exposedByDefault: false
     watch: true
   file:
-    filename: "traefik_dynamic.yml"
+    filename: "/traefik_dynamic.yml"
 
 ################################################################
 # Resolvers
