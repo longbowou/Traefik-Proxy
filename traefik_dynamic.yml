@@ -1,0 +1,21 @@
+################################################################
+# Http
+################################################################
+
+http:
+  middlewares:
+    traefik-dashboard-auth:
+      basicAuth:
+        users:
+          - "admin:1RAxezGFfvn@"
+
+  routers:
+    traefik-dashboard:
+      rule: "Host(`traefik.longbowou.com`)"
+      middlewares:
+        - traefik-dashboard-auth
+      entrypoints:
+        - http
+      service: "api@internal"
+      tls:
+        certResolver: le

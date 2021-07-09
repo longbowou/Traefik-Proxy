@@ -1,0 +1,130 @@
+################################################################
+#
+# Configuration for Traefik v2.
+#
+################################################################
+
+################################################################
+# Global configuration
+################################################################
+#global:
+#  checkNewVersion: true
+#  sendAnonymousUsage: true
+
+################################################################
+# EntryPoints configuration
+################################################################
+
+entryPoints:
+  http:
+    address: :80
+    http:
+      redirections:
+        entryPoint:
+          to: https
+          scheme: https
+
+  https:
+    address: :443
+
+################################################################
+# API and dashboard configuration
+################################################################
+
+api:
+  dashboard: true
+
+################################################################
+# Docker configuration backend
+################################################################
+
+providers:
+  docker:
+    network: treafik-proxy
+    exposedByDefault: false
+    watch: true
+  file:
+    filename: "traefik_dynamic.yml"
+
+################################################################
+# Resolvers
+################################################################
+
+certificatesResolvers:
+  le:
+    acme:
+      email: info@longbowou.com
+      storage: acme.json
+      httpChallenge:
+        entryPoint: http
+
+  ################################################################
+  # Traefik logs configuration
+  ################################################################
+
+  # Traefik logs
+  # Enabled by default and log to stdout
+  #
+  # Optional
+  #
+  #log:
+  # Log level
+  #
+  # Optional
+  # Default: "ERROR"
+  #
+  #  level: DEBUG
+
+  # Sets the filepath for the traefik log. If not specified, stdout will be used.
+  # Intermediate directories are created if necessary.
+  #
+  # Optional
+  # Default: os.Stdout
+  #
+  #  filePath: log/traefik.log
+
+  # Format is either "json" or "common".
+  #
+  # Optional
+  # Default: "common"
+  #
+  #  format: json
+
+  ################################################################
+  # Access logs configuration
+  ################################################################
+
+  # Enable access logs
+  # By default it will write to stdout and produce logs in the textual
+  # Common Log Format (CLF), extended with additional fields.
+  #
+  # Optional
+  #
+  #accessLog:
+  # Sets the file path for the access log. If not specified, stdout will be used.
+  # Intermediate directories are created if necessary.
+  #
+  # Optional
+  # Default: os.Stdout
+  #
+  #  filePath: /path/to/log/log.txt
+
+  # Format is either "json" or "common".
+  #
+  # Optional
+  # Default: "common"
+  #
+  #  format: json
+
+  ################################################################
+  # Ping configuration
+  ################################################################
+
+  # Enable ping
+  #ping:
+  # Name of the related entry point
+  #
+  # Optional
+  # Default: "traefik"
+  #
+#  entryPoint: traefik
