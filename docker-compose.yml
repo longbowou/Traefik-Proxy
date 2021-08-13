@@ -5,8 +5,9 @@ services:
     image: traefik:latest
     container_name: traefik-proxy
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
+      - "27017:27017"
     environment:
       - TZ=Africa/Lome
     volumes:
