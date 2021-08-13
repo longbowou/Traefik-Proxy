@@ -16,7 +16,7 @@ touch acme.json & chmod 600 acme.json
 ```
 
 ```
-touch access.log & treafik.log
+touch access.log
 ```
 
 Start Traefik

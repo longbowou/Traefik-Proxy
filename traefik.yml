@@ -27,6 +27,9 @@ entryPoints:
   https:
     address: :443
 
+  mongo:
+    address: :27017
+
 ################################################################
 # API and dashboard configuration
 ################################################################
@@ -40,7 +43,7 @@ api:
 
 providers:
   docker:
-#    endpoint: "tcp://127.0.0.1:2377"
+    #    endpoint: "tcp://127.0.0.1:2377"
     #    swarmMode: true
     network: treafik-proxy
     exposedByDefault: false
@@ -66,9 +69,9 @@ certificatesResolvers:
 # Traefik logs configuration
 ################################################################
 
-log:
-  filePath: traefik.log
-  format: json
+#log:
+#  filePath: traefik.log
+#  format: json
 
 ################################################################
 # Access logs configuration

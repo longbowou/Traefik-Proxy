@@ -14,7 +14,6 @@ services:
       - ./traefik.yml:/etc/traefik/traefik.yml
       - ./traefik_dynamic.yml:/traefik_dynamic.yml
       - ./acme.json:/acme.json
-      - ./traefik.log:/traefik.log
       - ./access.log:/access.log
     restart: always
 
