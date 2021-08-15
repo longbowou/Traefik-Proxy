@@ -8,7 +8,7 @@ http:
       basicAuth:
         users:
           # 1RAxezGFfvn@
-          - "admin:$2y$12$3y/ajOt0dE688LA.yWhPT.8cR7Gp1E39QyvxYqWc5IbMUO8CY2aQG "
+          - "admin:$2y$12$3y/ajOt0dE688LA.yWhPT.8cR7Gp1E39QyvxYqWc5IbMUO8CY2aQG"
 
   routers:
     traefik-dashboard:

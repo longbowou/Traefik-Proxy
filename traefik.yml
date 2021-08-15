@@ -43,8 +43,6 @@ api:
 
 providers:
   docker:
-    #    endpoint: "tcp://127.0.0.1:2377"
-    #    swarmMode: true
     network: treafik-proxy
     exposedByDefault: false
     watch: true
@@ -61,8 +59,9 @@ certificatesResolvers:
   le:
     acme:
       caServer: https://acme-staging-v02.api.letsencrypt.org/directory
-      email: info@longbowou.com
+      email: longbowou@longbowou.com
       storage: acme.json
+      tlsChallenge: { }
       httpChallenge:
         entryPoint: http
 
