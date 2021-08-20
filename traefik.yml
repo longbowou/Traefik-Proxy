@@ -58,8 +58,7 @@ providers:
 certificatesResolvers:
   le:
     acme:
-      caServer: https://acme-staging-v02.api.letsencrypt.org/directory
-      email: longbowou@longbowou.com
+      email: le@longbowou.com
       storage: acme.json
       tlsChallenge: { }
       httpChallenge:
