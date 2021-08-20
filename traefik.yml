@@ -27,8 +27,8 @@ entryPoints:
   https:
     address: :443
 
-  mongo:
-    address: :27017
+#  mongo:
+#    address: :27017
 
 ################################################################
 # API and dashboard configuration

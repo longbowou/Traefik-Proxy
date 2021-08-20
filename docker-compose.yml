@@ -7,7 +7,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "27017:27017"
+#      - "27017:27017"
     environment:
       - TZ=Africa/Lome
     volumes:
