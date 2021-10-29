@@ -7,7 +7,6 @@ services:
     ports:
       - "80:80"
       - "443:443"
-#      - "27017:27017"
     environment:
       - TZ=Africa/Lome
     volumes:
@@ -15,7 +14,6 @@ services:
       - ./traefik.yml:/etc/traefik/traefik.yml
       - ./traefik_dynamic.yml:/traefik_dynamic.yml
       - ./acme.json:/acme.json
-      - ./access.log:/access.log
     restart: always
 
 networks:

@@ -27,9 +27,6 @@ entryPoints:
   https:
     address: :443
 
-#  mongo:
-#    address: :27017
-
 ################################################################
 # API and dashboard configuration
 ################################################################
@@ -63,19 +60,3 @@ certificatesResolvers:
       tlsChallenge: { }
       httpChallenge:
         entryPoint: http
-
-################################################################
-# Traefik logs configuration
-################################################################
-
-#log:
-#  filePath: traefik.log
-#  format: json
-
-################################################################
-# Access logs configuration
-################################################################
-
-accessLog:
-  filePath: access.log
-  format: json
