@@ -1,9 +1,8 @@
 version: '3'
 
 services:
-  traefik-proxy:
-    image: traefik:latest
-    container_name: traefik-proxy
+  app:
+    image: traefik:2.6.3
     ports:
       - "80:80"
       - "443:443"
