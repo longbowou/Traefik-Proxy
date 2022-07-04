@@ -12,7 +12,7 @@ requests on behalf of your system and finds out which components are responsible
 Create basic files:
 
 ```
-touch acme.json & chmod 600 acme.json
+touch acme.json && chmod 600 acme.json
 ```
 
 Start Traefik
