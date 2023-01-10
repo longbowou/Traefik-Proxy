@@ -40,7 +40,7 @@ api:
 
 providers:
   docker:
-    network: treafik-proxy
+    network: traefik-proxy
     exposedByDefault: false
     watch: true
 
