@@ -9,7 +9,13 @@ requests on behalf of your system and finds out which components are responsible
 
 [Documentation](https://doc.traefik.io/traefik)
 
-Create basic files:
+Create traefik proxy external network:
+
+```
+docker network create traefik-proxy
+```
+
+Create acme file:
 
 ```
 touch acme.json && chmod 600 acme.json
@@ -18,7 +24,7 @@ touch acme.json && chmod 600 acme.json
 Start Traefik
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 ## License
